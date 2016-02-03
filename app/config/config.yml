@@ -68,3 +68,8 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# Tiwg Globals
+twig:
+    globals:
+        contact_email: pablo@pablocarrillo.net

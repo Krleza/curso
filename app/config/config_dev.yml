@@ -33,3 +33,8 @@ monolog:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+# Tiwg Globals
+twig:
+    globals:
+        contact_email: pablo@pablocarrillo.net

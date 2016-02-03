@@ -35,6 +35,54 @@ class DwTestTexto
      */
     private $texto;
 
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitulo()
+    {
+        return $this->titulo;
+    }
+
+    /**
+     * @param string $titulo
+     */
+    public function setTitulo($titulo)
+    {
+        $this->titulo = $titulo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTexto()
+    {
+        return $this->texto;
+    }
+
+    /**
+     * @param string $texto
+     */
+    public function setTexto($texto)
+    {
+        $this->texto = $texto;
+    }
+
 
 }
 

@@ -5,10 +5,10 @@
 {% block body %}
 
     <div class="container home-choice">
-        <form>
-            <textarea name="texto" rows="10" cols="30"></textarea>
-            <input type="submit" value="enviar">
-        </form>
+
+        {{ form_start(form,{'action':'', 'method':'POST'}) }}
+        {{ form_end (form)}}
+
     </div>
 
 

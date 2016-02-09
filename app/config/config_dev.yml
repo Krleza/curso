@@ -34,7 +34,14 @@ monolog:
 #swiftmailer:
 #    delivery_address: me@example.com
 
-# Tiwg Globals
+# Twig Globals
 twig:
+    cache: false
     globals:
         contact_email: pablo@pablocarrillo.net
+
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~

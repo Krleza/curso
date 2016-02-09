@@ -3,31 +3,18 @@
 namespace EscritorBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
-class TextosController
+class TextosController  extends Controller
 {
     /**
      * @Route("/texto/{id}", defaults={"id" = 1})
      */
     public function imprimeTexto($id)
     {
-        switch ($id) {
-            case 1:
-                $texto = 'Texto uno';
-                break;
-            case 2:
-                $texto = 'Texto dos';
-                break;
-            case 3:
-                $texto = 'Texto tres';
-                break;
-            default:
-                $texto = 'Texto por defecto';
-                break;
-        }
-
+        $servicio = $this->get('service_test');
+        $texto = $servicio->showText($id);
 
         return new Response('<html><body>'.$texto.'!</body></html>');
     }

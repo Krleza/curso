@@ -73,3 +73,9 @@ swiftmailer:
 twig:
     globals:
         contact_email: pablo@pablocarrillo.net
+
+
+services:
+    service_test:
+        class:        EscritorBundle\Services\ServiceTest
+        arguments:    [%service_test:id%]

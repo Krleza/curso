@@ -13,6 +13,10 @@ web_profiler:
 
 monolog:
     handlers:
+        applog:
+            type: stream
+            path: /var/log/symfony.log
+            level: debug
         main:
             type: stream
             path: "%kernel.logs_dir%/%kernel.environment%.log"
@@ -40,8 +44,6 @@ twig:
     globals:
         contact_email: pablo@pablocarrillo.net
 
-assetic:
-    debug:          '%kernel.debug%'
-    use_controller: '%kernel.debug%'
-    filters:
-        cssrewrite: ~
+
+
+

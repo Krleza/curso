@@ -22,7 +22,9 @@ class TextosController  extends Controller
 
         $logger->info('escribo texto');
 
-        return new Response('<html><body>' . $texto . '!</body></html>');
+        $translated = $this->get('translator')->trans('Symfony is great');
+
+        return new Response('<html><body>' . $translated . '!</body></html>');
     }
 
 }

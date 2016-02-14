@@ -11,7 +11,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class TextosController  extends Controller
 {
     /**
-     * @Route("/texto/{id}", defaults={"id" = 1})
+     * @Route("/{_locale}/texto/{id}", defaults={"id" = 1})
      */
     public function imprimeTexto($id)
     {
@@ -22,9 +22,9 @@ class TextosController  extends Controller
 
         $logger->info('escribo texto');
 
-        $translated = $this->get('translator')->trans('Symfony is great');
+        $translated = $this->get('translator')->trans('Symfony mola!');
 
-        return new Response('<html><body>' . $translated . '!</body></html>');
+        return new Response('<html><body>' . $translated . '</body></html>');
     }
 
 }

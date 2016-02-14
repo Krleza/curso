@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/{_locale}/")
      */
     public function indexAction()
     {

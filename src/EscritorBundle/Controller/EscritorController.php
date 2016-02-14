@@ -14,7 +14,7 @@ class EscritorController extends Controller
 {
 
     /**
-     * @Route("/escritor")
+     * @Route("/{_locale}/escritor")
      */
     public function formAction(Request $request){
         $texto = new DwTestTexto();

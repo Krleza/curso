@@ -6,12 +6,20 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class DefaultControllerTest extends WebTestCase
 {
-    public function testIndex()
+    public function testIndexAction()
     {
-        $client = static::createClient();
+        $t = static::createClient();
 
-        $crawler = $client->request('GET', '/');
+        $t->request('GET', '/');
 
-        $this->assertContains('Hello World', $client->getResponse()->getContent());
+        $this->assertContains('Procesador de Textos', $t->getResponse()->getContent());
+    }
+
+    public function testRegisterAction(){
+        $t = static::createClient();
+
+        $t->request('GET', '/{_locale}/registro');
+
+        $this->assertContains('Procesador de Textos', $t->getResponse()->getContent());
     }
 }

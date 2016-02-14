@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/{_locale}/")
+     * @Route("/{_locale}/index")
      */
     public function indexAction()
     {
@@ -30,7 +30,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/registro")
+     * @Route("/{_locale}/registro")
      */
     public function registerAction(Request $request)
     {

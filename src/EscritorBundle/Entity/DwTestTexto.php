@@ -4,6 +4,7 @@ namespace EscritorBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * DwTestTexto
  *
@@ -18,7 +19,7 @@ class DwTestTexto
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
-     * @Assert\NotBlank()
+     *
      */
     private $id;
 

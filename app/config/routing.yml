@@ -6,3 +6,6 @@ escritor:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+logout:
+    path: /logout
